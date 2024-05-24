@@ -42,21 +42,27 @@ dependencies {
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
 
-    implementation platform('com.squareup.okhttp3:okhttp-bom:3.10.0')
-//    debugImplementation platform('com.squareup.okhttp3:okhttp-bom:4.11.0')
-    implementation("me.bridgefy:android-sdk:1.0.0@aar") {
+    implementation platform('com.squareup.okhttp3:okhttp-bom:4.11.0')
+    implementation("me.bridgefy:android-sdk:1.1.1@aar") {
         transitive = true
+        exclude group: 'com.squareup.okhttp3'
     }
-//    testImplementation platform('com.squareup.okhttp3:okhttp-bom:4.11.0')
-//    testImplementation("me.bridgefy:android-sdk:1.0.0@aar") {
-//        transitive = true
-//    }
-//    debugImplementation platform('com.squareup.okhttp3:okhttp-bom:4.11.0')
-//    debugImplementation("me.bridgefy:android-sdk:1.0.0@aar") {
-//        transitive = true
-//    }
-//    androidTestImplementation platform('com.squareup.okhttp3:okhttp-bom:4.11.0')
-//    androidTestImplementation("me.bridgefy:android-sdk:1.0.0@aar") {
-//        transitive = true
-//    }
+
+    testImplementation platform('com.squareup.okhttp3:okhttp-bom:4.11.0')
+    testImplementation("me.bridgefy:android-sdk:1.1.1@aar") {
+        transitive = true
+        exclude group: 'com.squareup.okhttp3'
+    }
+
+    debugImplementation platform('com.squareup.okhttp3:okhttp-bom:4.11.0')
+    debugImplementation("me.bridgefy:android-sdk:1.1.1@aar") {
+        transitive = true
+        exclude group: 'com.squareup.okhttp3'
+    }
+
+    androidTestImplementation platform('com.squareup.okhttp3:okhttp-bom:4.11.0')
+    androidTestImplementation("me.bridgefy:android-sdk:1.1.1@aar") {
+        transitive = true
+        exclude group: 'com.squareup.okhttp3'
+    }
 }
